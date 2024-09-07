@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Input, FormControl, FormLabel, VStack, Box, IconButton, Text } from '@chakra-ui/react';
+import { Button, Input, FormControl, FormLabel, VStack, Box, IconButton, Text, HStack } from '@chakra-ui/react';
 import { AddIcon, MinusIcon } from '@chakra-ui/icons';
 import { userStore } from '../store/userstore.js';
 import { taskStore } from '../store/taskstore.js';
@@ -120,10 +120,16 @@ const DetailsPage = () => {
             Add Exercise
           </Button>
         </Box>
-
-        <Button type="submit" colorScheme="blue">
+          <HStack>
+          
+          <Button type="submit" colorScheme="blue">
           Submit
         </Button>
+        <Button colorScheme="blue" onClick={()=>navigate(`/assigned/${id}`)}>
+          ViewAssigned
+        </Button>
+          </HStack>
+        
       </VStack>
     </Box>
   );

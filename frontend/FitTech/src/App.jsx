@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import { ChakraProvider,useColorModeValue,Box, Container } from "@chakra-ui/react";
 import LoginPage from "./pages/LoginPage";
 import DetailsPage from "./pages/DetailsPage";
+import AssignedAdmin from "./pages/AssignedAdmin";
 
 function App() {
   const bg = useColorModeValue("gray.100", "gray.900");
@@ -18,6 +19,7 @@ function App() {
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage/>} />
         <Route path="/details/:id" element={<DetailsPage />} />
+        <Route path="/assigned/:id" element={<AssignedAdmin/>}/>
       </Routes>
       </Container>
     </>
