@@ -43,3 +43,15 @@ export const getUsers = async(req,res)=>{
     res.status(500).json({ success: false, message: "Server Error" });
   }
 }
+
+export const updateUsers = async(req,res)=>{
+    const {id}= req.params;
+    const user = req.body;
+    try{
+        const updateUser = await fitUser.findByIdAndUpdate(id,user,{new:true});
+        res.status(200).json({ success: true, data: updateUser });
+    }
+    catch(error){
+        res.status(500).json({ success: false, message: "Server Error" });
+    }
+}

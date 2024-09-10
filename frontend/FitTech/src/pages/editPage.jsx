@@ -1,9 +1,12 @@
 import React from 'react'
+import { useParams } from 'react-router';
 
-function usersPage() {
+function EditPage() {
+    const {id} = useParams();
+    console.log(id);
   return (
-    <div>usersPage</div>
+    <div>Edit</div>
   )
 }
 
-export default usersPage
+export default EditPage;

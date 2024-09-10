@@ -7,6 +7,7 @@ import { ChakraProvider,useColorModeValue,Box, Container } from "@chakra-ui/reac
 import LoginPage from "./pages/LoginPage";
 import DetailsPage from "./pages/DetailsPage";
 import AssignedAdmin from "./pages/AssignedAdmin";
+import EditPage from "./pages/EditPage";
 
 function App() {
   const bg = useColorModeValue("gray.100", "gray.900");
@@ -20,6 +21,7 @@ function App() {
         <Route path="/login" element={<LoginPage/>} />
         <Route path="/details/:id" element={<DetailsPage />} />
         <Route path="/assigned/:id" element={<AssignedAdmin/>}/>
+        <Route path="/edit/:id" element={<EditPage/>}/>
       </Routes>
       </Container>
     </>
